@@ -14,6 +14,13 @@ web/sites/*/services.local.yml
 # Ignore Drupal's file directory
 /web/sites/*/files/
 
+# Allow un-derived files and sqlite db.
+!/web/sites/default/files/
+/web/sites/default/files/css
+/web/sites/default/files/js
+/web/sites/default/files/php
+/web/sites/default/files/styles
+
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 

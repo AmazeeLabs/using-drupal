@@ -2,7 +2,7 @@ version: '2.3'
 
 x-lagoon-project:
   # Lagoon project name (leave `&lagoon-project` when you edit this)
-  &lagoon-project drupal-example
+  &lagoon-project using-drupal
 
 x-volumes:
   &default-volumes
@@ -14,9 +14,9 @@ x-environment:
   &default-environment
     LAGOON_PROJECT: *lagoon-project
     # Route that should be used locally
-    LAGOON_ROUTE: http://drupal.docker.amazee.io
+    LAGOON_ROUTE: http://using-drupal.docker.amazee.io
     # Uncomment if you like to have the system behave like in production
-    #LAGOON_ENVIRONMENT_TYPE: production
+    LAGOON_ENVIRONMENT_TYPE: production
     # Uncomment to enable xdebug and then restart via `docker-compose up -d`
     #XDEBUG_ENABLE: "true"
 
@@ -26,7 +26,7 @@ services:
   cli: # cli container, will be used for executing composer and any local commands (drush, drupal, etc.)
     build:
       context: .
-      dockerfile: Dockerfile.cli
+      dockerfile: lagoon/Dockerfile.cli
     image: *lagoon-project # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     labels:
       # Lagoon Labels
@@ -42,7 +42,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: Dockerfile.nginx
+      dockerfile: lagoon/Dockerfile.nginx
       args:
         CLI_IMAGE: *lagoon-project # Inject the name of the cli image
     labels:
@@ -61,7 +61,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: Dockerfile.php
+      dockerfile: lagoon/Dockerfile.php
       args:
         CLI_IMAGE: *lagoon-project
     labels:
@@ -74,15 +74,15 @@ services:
     environment:
       << : *default-environment # loads the defined environment variables from the top
 
-
-  mariadb:
-    image: amazeeio/mariadb-drupal
-    labels:
-      lagoon.type: mariadb
-    ports:
-      - "3306" # exposes the port 3306 with a random local port, find it with `docker-compose port mariadb 3306`
-    environment:
-      << : *default-environment
+  ## Uncomment for MariaDB
+  #  mariadb:
+  #    image: amazeeio/mariadb-drupal
+  #    labels:
+  #      lagoon.type: mariadb
+  #    ports:
+  #      - "3306" # exposes the port 3306 with a random local port, find it with `docker-compose port mariadb 3306`
+  #    environment:
+  #      << : *default-environment
 
   ## Uncomment for Redis
   # redis:

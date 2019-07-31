@@ -1,4 +1,4 @@
-uuid: 21cfba51-9490-44d6-9711-9724d75bbca6
+uuid: d8efca89-093b-4793-a831-165784b84226
 langcode: en
 status: true
 dependencies: {  }
@@ -6,7 +6,7 @@ _core:
   default_config_hash: oRaTkAuF5YGWwunXlxxCdL64yYev2xsqiIvH5fCwXEI
 id: author
 label: Author
-weight: 3
+weight: -6
 is_admin: null
 permissions:
   - 'access content overview'

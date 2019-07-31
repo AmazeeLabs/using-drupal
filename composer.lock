@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3c42c51253ba3bc56b77bf433a3ddb5",
+    "content-hash": "dcaad378ccf89dcc714df1ffda465e8c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2596,6 +2596,57 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "time": "2019-07-16T16:24:57+00:00"
+        },
+        {
+            "name": "drupal/graphql",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/graphql.git",
+                "reference": "17e33a9e78f4a8b5baa652a6858726af091d6a3c"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "webonyx/graphql-php": "^0.12.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-rc3+10-dev",
+                    "datestamp": "1561027684",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fubhy",
+                    "homepage": "https://www.drupal.org/user/761344"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                },
+                {
+                    "name": "pmelab",
+                    "homepage": "https://www.drupal.org/user/555322"
+                }
+            ],
+            "description": "Exposes your Drupal data model through a GraphQL schema.",
+            "homepage": "http://drupal.org/project/graphql",
+            "support": {
+                "source": "https://git.drupalcode.org/project/graphql"
+            },
+            "time": "2019-07-31T09:33:38+00:00"
         },
         {
             "name": "drush/drush",
@@ -5970,6 +6021,51 @@
             "time": "2015-12-17T08:42:14+00:00"
         },
         {
+            "name": "webonyx/graphql-php",
+            "version": "v0.12.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webonyx/graphql-php.git",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "reference": "4c545e5ec4fc37f6eb36c19f5a0e7feaf5979c95",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "psr/http-message": "^1.0",
+                "react/promise": "2.*"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "time": "2018-09-02T14:59:54+00:00"
+        },
+        {
             "name": "zaporylie/composer-drupal-optimizations",
             "version": "1.1.0",
             "source": {
@@ -8470,7 +8566,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/graphql": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

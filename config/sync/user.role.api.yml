@@ -1,0 +1,9 @@
+uuid: 7db3978c-a21b-40cb-abb1-6d008a55e1aa
+langcode: en
+status: true
+dependencies: {  }
+id: api
+label: 'API user'
+weight: -7
+is_admin: null
+permissions: {  }

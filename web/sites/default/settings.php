@@ -133,6 +133,9 @@ if (getenv('TMP')) {
 if (getenv('LAGOON')) {
   $settings['hash_salt'] = hash('sha256', getenv('LAGOON_PROJECT'));
 }
+else {
+  $settings['hash_salt'] = hash('sha256', 'using-drupal');
+}
 
 // Settings for all environments.
 if (file_exists(__DIR__ . '/all.settings.php')) {

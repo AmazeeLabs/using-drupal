@@ -1,0 +1,14 @@
+uuid: 13216c0a-e369-4c82-a886-4ab12fc3e13e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.api
+  module:
+    - user
+id: user_remove_role_action.api
+label: 'Remove the API user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: api

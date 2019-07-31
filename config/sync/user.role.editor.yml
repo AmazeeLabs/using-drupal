@@ -1,4 +1,4 @@
-uuid: 2f0ecb2b-fc2a-41b3-bcad-0cf8043f2a83
+uuid: 1dc34731-6f93-4dfa-9168-fac115d03575
 langcode: en
 status: true
 dependencies: {  }
@@ -6,7 +6,7 @@ _core:
   default_config_hash: 5Nn7qN2pQIJdOnZ2P8bjYXYG9OMRaLdJH1iU8syxxpE
 id: editor
 label: Editor
-weight: 4
+weight: -5
 is_admin: null
 permissions:
   - 'access content overview'

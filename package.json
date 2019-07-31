@@ -1,0 +1,20 @@
+{
+  "name": "using-drupal",
+  "version": "1.0.0",
+  "description": "The Drupal 8.7 installation that works with Gatsby's using-drupal example.",
+  "main": "index.js",
+  "scripts": {
+    "backup": "rm -rf backup; mkdir backup; cp -pr web/sites/default/files backup/; cp -pr config backup/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmazeeLabs/using-drupal.git"
+  },
+  "author": "John Albin Wilkins <john.albin@amazee.com> (https://www.amazee.io/)",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/AmazeeLabs/using-drupal/issues"
+  },
+  "homepage": "https://github.com/AmazeeLabs/using-drupal#readme"
+}

@@ -24,6 +24,6 @@ environments:
         schedule: "H * * * *" # this will run the cron once per hour
         command: drush cron
         service: cli
-    # routes:
-    #   - varnish:
-    #       - "domain.com"
+    routes:
+      - varnish:
+          - "using-drupal.amazee.io"

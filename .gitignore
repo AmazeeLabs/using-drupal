@@ -16,10 +16,7 @@ web/sites/*/services.local.yml
 
 # Allow un-derived files and sqlite db.
 !/web/sites/default/files/
-/web/sites/default/files/css
-/web/sites/default/files/js
-/web/sites/default/files/php
-/web/sites/default/files/styles
+/web/sites/default/files/persistence
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest

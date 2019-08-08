@@ -25,24 +25,24 @@
  */
 
 // Lagoon Database connection.
-//if (getenv('LAGOON')) {
-//  $databases['default']['default'] = array(
-//    'driver' => 'mysql',
-//    'database' => getenv('MARIADB_DATABASE') ?: 'drupal',
-//    'username' => getenv('MARIADB_USERNAME') ?: 'drupal',
-//    'password' => getenv('MARIADB_PASSWORD') ?: 'drupal',
-//    'host' => getenv('MARIADB_HOST') ?: 'mariadb',
-//    'port' => 3306,
-//    'prefix' => '',
-//  );
-//}
-
-$databases['default']['default'] = array(
-  'database' => 'sites/default/files/.sqlite',
-  'prefix' => '',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
-  'driver' => 'sqlite',
-);
+if (getenv('LAGOON')) {
+  $databases['default']['default'] = array(
+    'driver' => 'mysql',
+    'database' => getenv('MARIADB_DATABASE') ?: 'drupal',
+    'username' => getenv('MARIADB_USERNAME') ?: 'drupal',
+    'password' => getenv('MARIADB_PASSWORD') ?: 'drupal',
+    'host' => getenv('MARIADB_HOST') ?: 'mariadb',
+    'port' => 3306,
+    'prefix' => '',
+  );
+} else {
+  $databases['default']['default'] = [
+    'database' => 'sites/default/files/.sqlite',
+    'prefix' => '',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
+    'driver' => 'sqlite',
+  ];
+}
 
 // Lagoon Solr connection
 // WARNING: you have to create a search_api server having "solr" machine name at

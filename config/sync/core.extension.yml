@@ -29,6 +29,8 @@ module:
   image: 0
   jsonapi: 0
   language: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   locale: 0
   media: 0
@@ -48,7 +50,6 @@ module:
   text: 0
   toolbar: 0
   tour: 0
-  update: 0
   user: 0
   views_ui: 0
   workflows: 0

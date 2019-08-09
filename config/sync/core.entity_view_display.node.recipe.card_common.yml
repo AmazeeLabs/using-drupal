@@ -1,4 +1,4 @@
-uuid: 62b6415a-4940-4f70-8ca0-ff698b8d54e9
+uuid: 9fdd2eaf-9cb1-4ebb-854e-66533af35834
 langcode: en
 status: true
 dependencies:
@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
+    - field.field.node.recipe.layout_builder__layout
     - node.type.recipe
     - responsive_image.styles.3_2_image
   module:
@@ -47,4 +48,5 @@ hidden:
   field_summary: true
   field_tags: true
   langcode: true
+  layout_builder__layout: true
   links: true

@@ -1,4 +1,4 @@
-uuid: e00e9bbb-9163-4796-ac78-b14ef58e2bae
+uuid: 8c43bdd2-7b73-42f9-bd08-187303b227c9
 langcode: en
 status: true
 dependencies:
@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
+    - field.field.node.recipe.layout_builder__layout
     - node.type.recipe
   module:
     - user
@@ -40,3 +41,4 @@ hidden:
   field_summary: true
   field_tags: true
   langcode: true
+  layout_builder__layout: true

@@ -1,4 +1,4 @@
-uuid: 7db3978c-a21b-40cb-abb1-6d008a55e1aa
+uuid: 3f42d433-9c51-4533-95b9-d9a537e814cc
 langcode: en
 status: true
 dependencies: {  }
@@ -6,4 +6,6 @@ id: api
 label: 'API user'
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'execute graphql requests'
+  - 'execute persisted graphql requests'

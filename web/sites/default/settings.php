@@ -122,6 +122,12 @@ if (getenv('LAGOON_ROUTES')) {
   // Escape dots, remove schema, use commas as regex separator.
     '^' . str_replace(['.', 'https://', 'http://', ','], ['\.', '', '', '|'], getenv('LAGOON_ROUTES')) . '$',
   );
+} else {
+  $settings['trusted_host_patterns'] = [
+    '^using-drupal.docker.amazee.io$',
+    '^127.0.0.1:\d+$',
+    '^localhost:\d+$',
+  ];
 }
 
 // Temp directory.

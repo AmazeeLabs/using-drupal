@@ -4,7 +4,7 @@
   "description": "The Drupal 8.7 installation that works with Gatsby's using-drupal example.",
   "main": "index.js",
   "scripts": {
-    "backup": "rm -rf backup; mkdir backup; cp -pr web/sites/default/files backup/; cp -pr config backup/",
+    "backup": "rm -rf backup; mkdir backup; cd web; drush cr; drush -y wd-del all; cd ..; cp -pr web/sites/default/files backup/; cp -pr config backup/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -125,8 +125,8 @@ if (getenv('LAGOON_ROUTES')) {
 } else {
   $settings['trusted_host_patterns'] = [
     '^using-drupal.docker.amazee.io$',
-    '^127.0.0.1:\d+$',
-    '^localhost:\d+$',
+    '^127.0.0.1$',
+    '^localhost$',
   ];
 }
 

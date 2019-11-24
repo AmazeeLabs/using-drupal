@@ -1,6 +1,7 @@
 master:
   host: ssh.lagoon.amazeeio.cloud
   options:
+    backup-dir: /tmp
     command-specific:
       sql-sync:
         no-ordered-dump: true
